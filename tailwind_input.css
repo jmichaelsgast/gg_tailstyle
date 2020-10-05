@@ -9,10 +9,3 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
-
-@layer base {
-  @font-face {
-    font-family: 'orbitronblack';
-    src: url('https://cdn.jsdelivr.net/gh/jmichaelsgast/gg_tailstyle/frontend/orbitron-black-webfont.woff') format("woff");
-  }
-}

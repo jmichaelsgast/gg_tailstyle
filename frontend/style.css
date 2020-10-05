@@ -593,9 +593,9 @@ video {
 }
 
 @font-face {
-  font-family: 'Orbitron Black';
+  font-family: 'orbitronblack';
 
-  src: url('https://cdn.jsdelivr.net/gh/jmichaelsgast/gg_tailstyle/frontend/orbitron-black.ttf') format("truetype");
+  src: url('https://cdn.jsdelivr.net/gh/jmichaelsgast/gg_tailstyle/frontend/orbitron-black-webfont.woff') format("woff");
 }
 
 .container {
