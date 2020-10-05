@@ -420,7 +420,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Arial, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -556,7 +556,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -590,12 +590,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-}
-
-@font-face {
-  font-family: 'orbitronblack';
-
-  src: url('https://cdn.jsdelivr.net/gh/jmichaelsgast/gg_tailstyle/frontend/orbitron-black-webfont.woff') format("woff");
 }
 
 .container {
@@ -825,6 +819,10 @@ video {
 
 .flex-auto {
   flex: 1 1 auto;
+}
+
+.font-orbitronblack {
+  font-family: orbitronblack, sans-serif;
 }
 
 .font-light {

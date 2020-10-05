@@ -8,10 +8,12 @@ module.exports = {
     content: ['frontend/*.html'],
   },
   theme: {
-    extend: {
     fontFamily: {
-        'orbitronblack': ['orbitronblack', 'sans-serif']
+        orbitronblack: ['orbitronblack', 'sans-serif'],
+        'sans': ['Arial', 'sans-serif'],
     },
+    extend: {
+    
     colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
