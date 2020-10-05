@@ -9,6 +9,9 @@ module.exports = {
   },
   theme: {
     extend: {
+    fontFamily: {
+        'orbitronblack': ['orbitronblack', 'sans-serif']
+    },
     colors: {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
