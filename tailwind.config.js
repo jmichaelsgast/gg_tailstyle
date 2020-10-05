@@ -8,7 +8,12 @@ module.exports = {
     content: ['frontend/*.html'],
   },
   theme: {
-    extend: {},
+    extend: {
+    colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+    },
+    },
   },
   variants: {},
   plugins: [],

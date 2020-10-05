@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="%%description%%" />
+    <title>%%title%%</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Recapcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        height: 100%;
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 28px;
+        color: #555555;
+        background: #fff;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 5em;
+        line-height: 1.2em;
+        margin: 0 0 0.3em;
+      }
+      h2 {
+        font-size: 1.8em;
+        line-height: 1.4em;
+        margin: 0 0 0.3em;
+      }
+      h3 {
+        font-size: 1.4em;
+        line-height: 1.4em;
+      }
+      h4 {
+        font-size: 1.25em;
+        line-height: 1.4em;
+      }
+      h5 {
+        font-size: 1.1em;
+        line-height: 1.4em;
+      }
+      h6 {
+        font-size: 1em;
+        line-height: 1.2em;
+      }
+
+      h1 a,
+      h2 a,
+      h3 a,
+      h4 a,
+      h5 a,
+      h6 a {
+        text-decoration: none;
+      }
+      p {
+        padding: 0 0 1em;
+        margin: 0;
+      }
+      a {
+        color: #ff6b3d;
+        outline: 0;
+        font-weight: bold;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      a:hover {
+        text-decoration: none;
+        color: #ffffff;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .highlight {
+        color: #1a489f;
+      }
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        width: 100%;
+        min-height: 800px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-position: 50% 50%\9 !important;
+        background-size: cover;
+      }
+      .bgimg-1 {
+        background-image: url("https://www2.gast.co.za/l/788663/2020-02-25/cgs5/788663/19828/geobanner.png");
+        height: 100%;
+      }
+
+      #menu {
+        z-index: 99;
+      }
+
+      .top-bar {
+        background: rgba(223, 234, 255, 1);
+        height: 45px;
+      }
+
+      .navbar {
+        border-radius: 0;
+      }
+
+      .navbar-default {
+        background: rgba(223, 234, 255, 1);
+        min-height: 110px;
+        border: 0;
+        border-top: solid 1px;
+        border-color: #f58220;
+        margin-bottom: 0px;
+      }
+
+      .navbar-default .navbar-nav > li > a {
+        color: #212222;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 10px;
+        padding: 19px;
+        white-space: nowrap;
+        font-family: arial;
+        text-transform: uppercase;
+      }
+
+      .navbar-default .navbar-nav > li > a:hover,
+      .navbar-default .navbar-nav > li > a:focus {
+        color: #002e6e;
+      }
+      .navbar-default .navbar-nav > .active > a,
+      .navbar-default .navbar-nav > .active > a:hover,
+      .navbar-default .navbar-nav > .active > a:focus {
+        background: transparent;
+        color: #002e6e;
+      }
+
+      .navbar-right {
+        float: right !important;
+        margin-top: 20px;
+      }
+
+      .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 12px 12px;
+        padding: 12px 12px;
+        margin-right: 0px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        background-color: white;
+        background-image: none;
+        border-radius: 4px;
+      }
+
+      .navbar-default .navbar-toggle {
+        border-color: #fff;
+      }
+      .navbar-default .navbar-toggle:focus,
+      .navbar-default .navbar-toggle:hover {
+        background-color: #fff;
+      }
+      .navbar-toggle .icon-bar {
+        display: block;
+        width: 24px;
+        height: 1px;
+        padding: 1px;
+        border-radius: 1px;
+      }
+      .navbar-default .navbar-toggle .icon-bar {
+        background-color: #000080;
+      }
+
+      .btn-default {
+        font-size: 17px;
+        margin: 30px 0 10px;
+        margin-right: 10px;
+        line-height: 20px;
+        padding: 10px 20px;
+        height: 50px;
+        border: 2px solid #fff;
+        background: transparent;
+        transition: all 0.4s;
+        color: #fff;
+        border-radius: 5px;
+        font-weight: 400;
+      }
+      .btn-default:hover,
+      .btn-default:focus,
+      .btn-default:active,
+      .btn-default.active,
+      .open > .dropdown-toggle.btn-default {
+        border: 2px solid white;
+        background: #1b4b9f;
+        color: white;
+      }
+      .btn-primary {
+        font-size: 17px;
+        margin: 30px 0 10px;
+        margin-right: 10px;
+        line-height: 20px;
+        padding: 10px 20px;
+        height: 50px;
+        border: 2px solid #ff6b3d;
+        background: #ff6b3d;
+        transition: all 0.4s;
+        color: white;
+        border-radius: 5px;
+        font-weight: 400;
+      }
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active,
+      .open > .dropdown-toggle.btn-primary {
+        border: 2px solid #ff6b3d;
+        background: transparent;
+        color: #ff6b3d;
+      }
+      .btn-secondary {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 20px 50px;
+        height: 65px;
+        border: none;
+        background: #3eb0f7;
+        transition: all 0.4s;
+        color: white;
+        border-radius: 4px;
+      }
+      .btn-secondary:hover,
+      .btn-secondary:focus,
+      .btn-secondary:active,
+      .btn-secondary.active,
+      .open > .dropdown-toggle.btn-secondary {
+        background: #1f96e0;
+        color: white;
+      }
+
+      .site-name img {
+        width: 181px;
+        height: 53px;
+      }
+      .logo {
+        margin: 100px 0 40px 0;
+      }
+      .logo img {
+        width: 181px;
+        height: 53px;
+      }
+      .landing h1 {
+        font-size: 56px;
+        font-weight: 300;
+        color: #fff;
+        margin: 30px 0 30px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      }
+      .landing p,
+      .landing h2 {
+        color: #fff;
+      }
+      .landing-text {
+        margin-bottom: 20px;
+        color: white;
+      }
+      .landing-text p {
+        font-size: 22px !important;
+      }
+      .head-btn {
+        margin-bottom: 150px;
+      }
+      .option {
+        text-transform: uppercase;
+        padding: 5px;
+        min-width: 80px;
+        margin-right: 5px;
+        transition: all 0.4s;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      .shadow-container {
+        box-shadow: #000 27px -35px 40px -41px;
+      }
+
+      .intro-header {
+        margin: 50px 0 50px;
+        background: #252a2e;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .intro-header h3 {
+        padding: 20px 0 10px;
+        color: white;
+        font-weight: 300;
+      }
+      .form-header input {
+        position: relative;
+        padding: 5px 15px;
+      }
+      .form-header .form-control {
+        border-radius: 5px;
+        border: solid 1px #dadada;
+        background-color: #fff;
+        color: #333;
+        height: 55px;
+      }
+      .form-header .btn {
+        border-radius: 5px;
+        height: 55px;
+        width: 100%;
+        background-color: #ff6b3d;
+        border: solid 1px #ff6b3d;
+        color: white;
+        font-size: 22px !important;
+        padding: 0 33px;
+        border: none;
+        margin: 0;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .form-header .btn:hover {
+        background-color: #1b4b9f;
+        border: solid 1px white;
+        color: white;
+        -webkit-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .privacy {
+        padding-top: 0;
+        font-size: 13px;
+      }
+      .intro-header p {
+        color: white;
+      }
+      .privacy a {
+        text-decoration: underline;
+        color: white;
+        font-weight: 300;
+      }
+      #policy {
+        padding: 100px 0 70px;
+      }
+
+      .title-line {
+        width: 100px;
+        height: 3px;
+        margin: 0 auto;
+        background: #3eb0f7;
+      }
+
+      .video-header {
+        margin: 40px 0 30px;
+      }
+      .video-embed {
+        position: relative;
+        padding-top: 56.25%;
+        height: 0;
+        background-color: #000000;
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .video-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      #footer {
+        background: #fff;
+        padding: 50px 0 50px;
+      }
+
+      .fa-2x {
+        font-size: 1.3em !important;
+      }
+
+      .social ul {
+        padding: 0;
+        list-style: none;
+      }
+      .social li {
+        display: inline-block;
+        padding-right: 0.3em;
+        padding-bottom: 0.3em;
+      }
+      .social li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #ff6b3d;
+        margin-left: 6px;
+      }
+      .social li a:hover {
+        color: #ffffff;
+      }
+
+      .social-light li a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #ff6b3d;
+        margin-left: 6px;
+      }
+      .social-light li a:hover {
+        color: #000080;
+      }
+
+      /* Desktop */
+      @media (min-width: 1200px) {
+        .container {
+          width: 1244px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .navbar-header {
+          float: none;
+        }
+        .navbar-left,
+        .navbar-right {
+          float: none !important;
+        }
+        .navbar-toggle {
+          display: block;
+        }
+        .navbar-collapse {
+          border-top: 1px solid transparent;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .navbar-fixed-top {
+          top: 0;
+          border-width: 0 0 1px;
+        }
+        .navbar-collapse.collapse {
+          display: none !important;
+        }
+        .navbar-nav {
+          float: none !important;
+          margin-top: 7.5px;
+        }
+        .navbar-nav > li {
+          float: none;
+        }
+        .navbar-nav > li > a {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .collapse.in {
+          display: block !important;
+        }
+      }
+
+      /* iPads (portrait) ----------- */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .head-btn {
+          margin: 50px 0 100px;
+        }
+        .intro-header {
+          margin: 50px 0 100px;
+        }
+
+        #policy {
+          padding: 30px 0 50px;
+        }
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .navbar-default .navbar-brand {
+          padding: 0px;
+          margin-top: 19px;
+          margin-left: 33px !important;
+        }
+      }
+
+      /* iPads (landscape) ----------- */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .landing h1 {
+          margin: 60px 0 60px 0;
+        }
+        .landing-text {
+          margin: 60px 0 40px 0;
+        }
+        .intro-header {
+          margin-top: 250px;
+        }
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .container {
+          max-width: 1244px;
+        }
+      }
+
+      /* smart-phone ----------- */
+      @media (max-width: 767px) {
+        .head-btn {
+          margin: 30px 0 80px;
+        }
+        .intro-header {
+          margin: 70px 0 80px;
+        }
+
+        .video-header {
+          margin: 50px 0 30px;
+        }
+
+        .btn-default {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 5px;
+        }
+        .btn-primary {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 5px;
+        }
+
+        .navbar-default .navbar-brand {
+          padding: 0px;
+          margin-top: 23px;
+          margin-left: 0px !important;
+        }
+      }
+
+      /* iPhone 6Plus (landscape) ----------- */
+      @media (max-width: 736px) {
+        .feature-img {
+          margin-top: 0;
+        }
+      }
+
+      /* iPhone 6 (landscape) ----------- */
+      @media (max-width: 667px) {
+        .landing h1 {
+          font-size: 50px;
+          margin: 10px 0 25px 0;
+        }
+        .landing-text {
+          margin-top: 20px;
+        }
+      }
+
+      /* iPhone 5 (landscape) ----------- */
+      @media (max-width: 568px) {
+        .landing h1 {
+          font-size: 40px;
+          margin: 20px 0 10px 0;
+        }
+      }
+
+      /* smart phone width: 360px ----------- */
+      @media (max-width: 360px) {
+        .video-header {
+          margin: 30px 0 30px;
+        }
+      }
+
+      /* iPhone 4/5 (portrait) ----------- */
+      @media (max-width: 320px) {
+        .logo {
+          margin: 30px 0 20px 0;
+        }
+        .landing h1 {
+          margin: 20px 0 35px 0;
+        }
+        .btn-default {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          padding: 10px 10px;
+          height: 35px;
+          border-radius: 80px;
+        }
+        .btn-primary {
+          font-size: 16px;
+          margin: 30px 0 10px;
+          margin-right: 15px;
+          padding: 15px 30px;
+          height: 35px;
+          border-radius: 80px;
+        }
+      }
+
+      .top-contact {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        vertical-align: baseline;
+      }
+
+      .top-contact:hover {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .top-contact:focus {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+
+      .span4 img {
+        margin-right: 10px;
+      }
+      .span4 .img-left {
+        float: left;
+        width: 100%;
+      }
+      .span4 .img-right {
+        float: right;
+        width: 100%;
+      }
+
+      .fa-orange {
+        color: #ff6b3d;
+      }
+
+      select,
+      textarea {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: inherit;
+        width: 100%;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #929292;
+        height: 55px;
+        padding: 10px;
+      }
+      .facebook-svg {
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='%2307509E'%3E%3Cg%3E%3Cg%3E%3Cpath class='st0' d='M124.88,40.75c0.86,0,1.56,0.7,1.56,1.56v18.38c0,0.86-0.7,1.56-1.56,1.56h-12.46 c-3.06,0-5.53,2.48-5.53,5.53v13.04h17.71c0.92,0,1.64,0.78,1.56,1.7l-1.55,18.38c-0.07,0.81-0.75,1.43-1.56,1.43h-16.16v61.01 c0,0.86-0.7,1.56-1.56,1.56H83.04c-0.86,0-1.56-0.7-1.56-1.56v-60.03v-0.98H70.33c-0.86,0-1.56-0.7-1.56-1.56V82.39 c0-0.86,0.7-1.56,1.56-1.56h11.15V63.11c0-12.35,10.01-22.36,22.36-22.36H124.88 M124.88,34.56h-21.05 c-15.74,0-28.54,12.8-28.54,28.54v11.54h-4.96c-4.27,0-7.75,3.47-7.75,7.75v18.38c0,4.27,3.47,7.74,7.75,7.74h4.96v54.82 c0,4.27,3.47,7.75,7.75,7.75h22.29c4.27,0,7.75-3.47,7.75-7.75v-54.82h9.98c4.06,0,7.37-3.05,7.72-7.09l1.55-18.38 c0.18-2.15-0.55-4.3-2.01-5.89c-1.46-1.59-3.54-2.51-5.7-2.51h-11.53v-6.21h11.81c4.27,0,7.75-3.47,7.75-7.75V42.31 C132.62,38.04,129.15,34.56,124.88,34.56L124.88,34.56z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-bottom: -10px;
+        margin-top: 10px;
+      }
+      .twitter-svg {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='%2307509E'%3E%3Cg%3E%3Cg%3E%3Cpath d='M31.08,140.66c-0.1,1.54,0.29,3.78,2.72,5.75l0.24,0.19l0.25,0.17c1.38,0.91,2.84,1.77,4.79,2.84 c4.84,2.56,9.88,4.58,14.97,5.99c7.52,2.08,15.27,3.13,23.04,3.13c20.95,0,40.09-7.56,53.92-21.3 c13.54-13.46,20.93-32.83,21.43-56.13c3.46-2.75,6.55-6.05,9.89-10.55c1.21-1.64,1.82-3.52,1.81-5.72c0-3.11-3.3-6.05-3.3-6.05 c0.13-0.36,0.26-0.72,0.37-1.08c1.07-2.8,0.25-5.88-2.11-7.67l-0.68-0.51l-0.8-0.31l-1.36-0.48h-1.17c-1.09,0-2.12,0.25-3.3,0.84 c-3.28,1.76-6.7,3.16-10.38,4.26c-2.53-2.07-5.2-3.66-8.13-4.85c-3.6-1.47-7.58-2.24-11.5-2.24c-0.67,0-1.33,0.02-1.99,0.06 c-4.36,0.28-8.74,1.52-12.67,3.57c-3.91,2.04-7.42,4.92-10.17,8.31c-2.92,3.61-5.04,7.85-6.12,12.28 c-0.41,1.66-0.66,3.35-0.77,5.1C73.33,72.7,61.08,65.74,50.94,54.19c-1.88-2.14-3.95-2.59-5.36-2.59c-1.34,0-3.88,0.43-5.8,3.29 c-5.52,8.27-5.09,19.32-1.33,28.08c-1.52,1.07-2.67,2.84-2.86,5.32c-0.08,1.39,0.02,2.59,0.2,3.98c0.9,7.15,4.27,13.73,9.21,18.61 c-0.72,1.65-0.74,3.53-0.06,5.23c3.03,8.27,8.24,13.12,13.23,16.07c-0.01,0-0.66,0.23-0.66,0.23c-4.66,1.63-9.58,2.49-14.23,2.49 c-1.23,0-2.46-0.06-3.36-0.14c-0.98-0.14-1.58-0.18-2-0.18c-1.18,0-2.26,0.25-3.29,0.77l-0.25,0.13 C32.75,136.66,31.08,138.37,31.08,140.66z M157.96,65.13c0,0.31,0.04,1.07-0.6,1.92c-2.82,3.8-5.83,7.2-9.61,10.04 c-0.55,0.41-1.47,0.84-1.47,1.62c0,19.95-5.1,39.87-19.64,54.32c-18.52,18.4-46.3,23.4-70.96,16.59 c-4.78-1.32-9.34-3.17-13.72-5.49c-1.45-0.79-2.88-1.61-4.28-2.53c-0.35-0.29-0.62-0.55-0.32-0.74c0.3-0.15,0.53-0.16,1.63,0 c6.9,0.68,14-0.35,20.53-2.63c3.59-1.25,11.29-3.78,13.52-7.16c0.05-0.08,0.11-0.08,0.16-0.16c-0.9-0.21-1.8-0.21-2.69-0.37 c-6.7-1.92-15.65-5.28-19.79-16.57c-0.26-0.66,0-1,0.69-0.87c5.52,0.43,7.5,0.13,9.42-0.29c-1.08-0.18-2.19-0.55-3.19-0.98 c-8.44-3.21-14.61-11.45-15.73-20.35c-0.13-1.03-0.21-1.9-0.16-2.85c0.05-0.66,0.34-0.87,0.92-0.5c4.34,2.25,9.21,2.77,9.6,2.69 c-1.08-0.84-2.08-1.77-3.06-2.69c-7.32-6.93-10.16-21.04-4.3-29.82c0.48-0.71,0.79-0.71,1.37-0.05 c13.39,15.25,29.88,22.37,49.77,25.33c0.53,0.08,0.58,0,0.5-0.58c-0.52-3.5-0.59-6.93,0.26-10.4c0.88-3.59,2.59-6.98,4.92-9.85 c2.25-2.77,5.07-5.07,8.24-6.73c3.16-1.65,6.65-2.65,10.21-2.88c3.66-0.24,7.37,0.35,10.76,1.73c2.59,1.05,4.88,2.48,7.02,4.3 c0.45,0.37,0.84,0.82,1.27,1.29c0.26,0.26,0.58,0.37,1,0.26c5.09-1.27,9.86-3.07,14.48-5.54c0.21-0.11,0.38-0.16,0.65-0.05 c0.21,0.16,0.13,0.42,0.03,0.64c-0.83,2.7-2.29,5.2-4.06,7.39c-1.16,1.44-4.05,5-6.02,5.33c4.14-0.69,8.36-1.75,12.19-3.48 c0.49-0.22,0.45-0.32,0.45,0C157.96,65.03,157.96,65.08,157.96,65.13z'/%3E%3Cg%3E%3Cpath class='st1' d='M119.86,53.26c-0.13,0.11-0.32,0.11-0.5,0C119.54,53.26,119.72,53.26,119.86,53.26z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-bottom: -10px;
+        margin-top: 10px;
+      }
+      .linkedin-svg {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='%2307509E'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M125.29,67.42c15.38,0,26.92,10.05,26.92,31.65v38.61c0,0.95-0.77,1.73-1.73,1.73h-19.93 c-0.95,0-1.73-0.77-1.73-1.73v-35.9c0-9.45-3.38-15.9-11.84-15.9c-6.46,0-10.3,4.34-11.99,8.55c-0.62,1.5-0.77,3.59-0.77,5.7 v37.55c0,0.95-0.77,1.73-1.73,1.73H82.56c-0.96,0-1.73-0.77-1.73-1.73c0.04-9.56,0.25-55.95,0.04-66.86 c-0.02-0.97,0.76-1.75,1.73-1.75h19.88c0.95,0,1.73,0.77,1.73,1.73v8.24c-0.05,0.08-0.11,0.16-0.16,0.23h0.16v-0.23 C107.32,74.26,112.87,67.42,125.29,67.42 M66.17,69.07c0.95,0,1.73,0.77,1.73,1.73v66.88c0,0.95-0.77,1.73-1.73,1.73H46.25 c-0.95,0-1.73-0.77-1.73-1.73V70.8c0-0.95,0.77-1.73,1.73-1.73H66.17 M125.29,61.24c-7.23,0-12.66,1.99-16.69,4.55 c-1.45-1.77-3.65-2.9-6.12-2.9H82.6c-2.11,0-4.17,0.86-5.65,2.37c-1.5,1.53-2.3,3.54-2.25,5.68c0.2,10.9,0,57.48-0.04,66.71 c-0.01,2.12,0.81,4.11,2.3,5.61c1.5,1.5,3.49,2.33,5.61,2.33h19.92c4.36,0,7.91-3.55,7.91-7.91v-37.55 c0-2.51,0.28-3.28,0.31-3.36c0.87-2.17,2.66-4.71,6.27-4.71c1.98,0,5.66,0,5.66,9.72v35.9c0,4.36,3.55,7.91,7.91,7.91h19.93 c4.36,0,7.91-3.55,7.91-7.91V99.07C158.39,71.18,141.29,61.24,125.29,61.24L125.29,61.24z M66.17,62.89H46.25 c-4.36,0-7.91,3.55-7.91,7.91v66.88c0,4.36,3.55,7.91,7.91,7.91h19.92c4.36,0,7.91-3.55,7.91-7.91V70.8 C74.08,66.44,70.53,62.89,66.17,62.89L66.17,62.89z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cpath d='M55.51,35.09c6.91,0,12.52,5.6,12.52,12.52s-5.6,12.52-12.52,12.52s-12.52-5.6-12.52-12.52 S48.6,35.09,55.51,35.09 M55.51,28.91c-10.31,0-18.7,8.39-18.7,18.7s8.39,18.7,18.7,18.7c10.31,0,18.7-8.39,18.7-18.7 S65.82,28.91,55.51,28.91L55.51,28.91z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-bottom: -10px;
+        margin-top: 10px;
+      }
+      .instagram-svg {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='%2307509E'%3E%3Cg%3E%3Cpath d='M128.11,44.01c15.64,0,28.31,12.67,28.31,28.31v61.02c0,15.64-12.67,28.31-28.31,28.31H67.09 c-15.64,0-28.31-12.67-28.31-28.31V72.32c0-15.64,12.67-28.31,28.31-28.31H128.11 M128.11,37.82H67.09 c-19.02,0-34.49,15.47-34.49,34.49v61.02c0,19.02,15.47,34.49,34.49,34.49h61.02c19.02,0,34.49-15.47,34.49-34.49V72.32 C162.6,53.3,147.13,37.82,128.11,37.82L128.11,37.82z'/%3E%3Cpath d='M97.6,76.26c14.67,0,26.56,11.89,26.56,26.56s-11.89,26.56-26.56,26.56c-14.67,0-26.56-11.89-26.56-26.56 S82.93,76.26,97.6,76.26 M97.6,70.08c-18.06,0-32.75,14.69-32.75,32.75s14.69,32.75,32.75,32.75c18.06,0,32.75-14.69,32.75-32.75 S115.66,70.08,97.6,70.08L97.6,70.08z'/%3E%3Cpath d='M131.37,61.06c-4.21,0-7.61,3.41-7.61,7.61s3.41,7.61,7.61,7.61c4.21,0,7.61-3.41,7.61-7.61 S135.57,61.06,131.37,61.06z'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-bottom: -10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- GAST NAVIGATION!! -->
+    <div class="top-bar hidden-xs hidden-sm">
+      <div class="container">
+        <div class="col-sm-6 pull-left" style="margin-top: 6px;"></div>
+        <div class="col-sm-6">
+          <div
+            class="social pull-right"
+            style="margin-top: 1px; margin-right: 10px;"
+          >
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/thegastgroup" target="_blank"
+                  ><span class="facebook-svg"></span
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/GASTGroup" target="_blank"
+                  ><span class="twitter-svg"></span
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/gastgroupsa/"
+                  target="_blank"
+                  ><span class="linkedin-svg"></span
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gastgroupsa/" target="_blank"
+                  ><span class="instagram-svg"></span
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.gastglobal.com">
+            <img
+              alt="GAST Official Logo"
+              src="https://www2.gast.co.za/l/788663/2019-08-27/8pk/788663/1636/Gast_logo_Official.png"
+            />
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="https://www.gastglobal.com/">Home</a></li>
+            <li>
+              <a href="https://www.gastglobal.com/">Products & Services</a>
+            </li>
+
+            <li>
+              <a href="https://www.gastglobal.com/">Resources</a>
+            </li>
+            <li><a href="https://www.gastglobal.com/">Careers</a></li>
+            <li><a href="https://www.gastglobal.com/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end-navigation-section -->
+
+    <section class="bgimg-1"></section>
+
+    <!-- HEADING-FORM-CONTENT -->
+    <div class="container" style="margin-top: -60vh;">
+      <div class="row intro-header">
+        <div class="col-md-7">
+          <div style="margin-top: 4vh;"></div>
+
+          <!-- PARDOT CONTENT -->
+          <div class="landing-text" style="margin-top: 50px;">
+            <h1>
+              <strong>GAST</strong><br /><a href="https://www.gastglobal.com/"
+                >Geosynthetics</a
+              >
+            </h1>
+            <p>
+              GAST brings you geosynthetic solutions to suit your every need.
+            </p>
+            <p>
+              Our products and services range from&nbsp;<a
+                href="https://www.gastglobal.com/"
+                >geomembranes</a
+              >&nbsp;and&nbsp;<a href="https://www.gastglobal.com/"
+                >geotextiles</a
+              >&nbsp; to&nbsp;<a href="https://www.gastglobal.com/">geonets</a
+              >,&nbsp;<a href="https://www.gastglobal.com//">geogrids</a
+              >,&nbsp;<a href="https://www.gastglobal.com/">geocomposites</a
+              >,&nbsp;<a href="https://www.gastglobal.com/">geocells</a
+              >&nbsp;and&nbsp;<a href="https://www.gastglobal.com/"
+                >geosynthetic clay liners</a
+              >.
+            </p>
+            <p>
+              Please complete the form for more information on our geosynthetics
+              or any of our other products and services including:&nbsp;<a
+                href="https://www.gastglobal.com/"
+                >civil</a
+              >,&nbsp;<a href="https://www.gastglobal.com/">construction</a
+              >,&nbsp;<a href="https://www.gastglobal.com/">consulting</a
+              >&nbsp;or&nbsp;<a href="https://www.gastglobal.com/"
+                >waterproofing</a
+              >.
+            </p>
+            <p>
+              For more information on these premium products or our
+              services&nbsp;<i class="fa fa-chevron-right"></i>&nbsp;<a
+                href="https://www.gastglobal.com/"
+                >Click here</a
+              >
+            </p>
+            <div style="margin-top: 5vh;"></div>
+
+            <!-- Navigation Buttons 
+                    <div class="head-btn container-fluid">
+                        <a href="https://www.gastglobal.com/products-services/" class="btn-default">Products & Services</a><br>
+                    </div>
+                   Navigation Buttons -->
+          </div>
+        </div>
+
+        <!-- PARDOT CAMPAIGN FORM -->
+        <div class="col-md-5">
+          <div class="intro-header shadow-container">
+            <h3 class="form-title text-center">CONTACT INFORMATION</h3>
+            <p class="text-center">
+              Please complete and submit the form below.
+            </p>
+            <form
+              class="form-header"
+              action="https://go.gastglobal.com/l/788663/2020-09-30/2xkh4"
+              role="form"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="firstname"
+                  type="text"
+                  placeholder="Name *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="lastname"
+                  type="text"
+                  placeholder="Surname *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="Email address *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="phone"
+                  type="text"
+                  placeholder="Phone Number *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="company"
+                  type="text"
+                  placeholder="Company *"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control input-lg"
+                  name="job-title"
+                  type="text"
+                  placeholder="Job Title *"
+                  required
+                />
+              </div>
+              <br />
+              <!-- div
+                class="g-recaptcha"
+                data-sitekey="6LdH5bQUAAAAANtBl3_Kl_m7P1aJxF4tZsyS7buF"
+              ></div -->
+              <br />
+              <div class="form-group last">
+                <input
+                  type="submit"
+                  class="btn btn-warning btn-block btn-lg"
+                  value="SEND FORM"
+                />
+              </div>
+              <p class="privacy text-center">
+                We will not share your email. Read our
+                <a href="https://www.gastglobal.com/" target="_blank"
+                  >privacy policy</a
+                >.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end-Pardot-form-section -->
+
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+      <div class="container">
+        <div class="col-sm-4 col-sm-offset-4">
+          <!-- Social Links -->
+          <div class="social social-light text-center">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/thegastgroup" target="_blank"
+                  ><i class="fa fa-facebook fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/GASTGroup" target="_blank"
+                  ><i class="fa fa-twitter fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/gastgroupsa/"
+                  target="_blank"
+                  ><i class="fa fa-linkedin fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gastgroupsa/" target="_blank"
+                  ><i class="fa fa-instagram fa-2x"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center" style="font-size: 18px; color: #757575;">
+            © MCMLXI - MMXX GAST. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end-footer-section -->
+
+    <!-- Bootstrap JS/JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
