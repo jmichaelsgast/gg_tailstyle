@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #5c6ac4;
-  --color-secondary: #ecc94b;
+  --color-primary: #034EA2;
+  --color-secondary: #f58220;
   /* ... */
 }
 
@@ -9,3 +9,7 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+  }
